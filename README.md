@@ -2,15 +2,15 @@
 
 ### AI-Powered Incident Response & Troubleshooting Assistant for DevOps and SRE
 
-![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)
-![Docker](https://img.shields.io/badge/Docker-Supported-blue.svg)
-![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=flat&logo=fastapi)
-![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat&logo=streamlit)
-![PyTorch](https://img.shields.io/badge/PyTorch-ROCm-ee4c2c?logo=pytorch)
-![AMD ROCm](https://img.shields.io/badge/AMD-ROCm-red?logo=amd)
-![FAISS](https://img.shields.io/badge/Vector_Store-FAISS-orange)
-![LangChain](https://img.shields.io/badge/Agent-LangChain-green)
-![License](https://img.shields.io/badge/License-MIT-green.svg)
+[![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)
+[![Docker](https://img.shields.io/badge/Docker-Supported-blue.svg)](https://www.docker.com/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=flat&logo=fastapi)](https://fastapi.tiangolo.com/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat&logo=streamlit)](https://streamlit.io/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-ROCm-ee4c2c?logo=pytorch)](https://pytorch.org/)
+[![AMD ROCm](https://img.shields.io/badge/AMD-ROCm-red?logo=amd)](https://rocm.docs.amd.com/)
+[![FAISS](https://img.shields.io/badge/Vector_Store-FAISS-orange)](https://github.com/facebookresearch/faiss)
+[![LangChain](https://img.shields.io/badge/Agent-LangChain-green)](https://www.langchain.com/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/license/mit/)
 
 ForgeLM is an AI-driven incident response and troubleshooting assistant designed for DevOps and Site Reliability Engineering (SRE) teams.
 
