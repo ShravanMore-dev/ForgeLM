@@ -1,0 +1,50 @@
+version: "3.8"
+
+services:
+  gateway:
+    image: nginx:alpine
+    container_name: forgelm-gateway
+    restart: always
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - ui
+    networks:
+      - forgelm-net
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    container_name: forgelm-api
+    privileged: true
+    restart: always
+    env_file: .env
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+    devices:
+      - /dev/kfd:/dev/kfd
+      - /dev/dri:/dev/dri
+    group_add:
+      - video
+    shm_size: "8gb"
+    networks:
+      - forgelm-net
+
+  ui:
+    build:
+      context: .
+      dockerfile: Dockerfile.ui
+    container_name: forgelm-ui
+    restart: always
+    environment:
+      - API_URL=http://forgelm-api:8000/troubleshoot
+    networks:
+      - forgelm-net
+
+networks:
+  forgelm-net:
+    driver: bridge

@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+streamlit
+requests
+transformers
+peft
+accelerate
+langchain
+langchain-community
+langchain-huggingface
+faiss-cpu
+pypdf
+sentence-transformers

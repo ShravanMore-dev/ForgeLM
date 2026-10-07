@@ -1,0 +1,6 @@
+models/
+data/
+forgelm_env/
+__pycache__/
+*.pyc
+.git/

@@ -1,0 +1,15 @@
+# Python & Environments
+__pycache__/
+*.py[cod]
+forgelm_env/
+.venv/
+
+# AI Models & Databases
+models/
+data/
+
+# Secrets & Configs
+.env
+
+# OS Files
+.DS_Store

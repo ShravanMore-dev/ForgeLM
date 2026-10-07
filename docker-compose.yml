@@ -1,0 +1,43 @@
+version: "3.8"
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    container_name: forgelm-api
+    privileged: true
+    ports:
+      - "8000:8000"
+    environment:
+      - LANGCHAIN_TRACING_V2=true
+      - LANGCHAIN_PROJECT=ForgeLM-SRE-Agent
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+    devices:
+      - /dev/kfd:/dev/kfd
+      - /dev/dri:/dev/dri
+    group_add:
+      - video
+    shm_size: "8gb"
+    restart: unless-stopped
+    networks:
+      - forgelm-net
+
+  ui:
+    build:
+      context: .
+      dockerfile: Dockerfile.ui
+    container_name: forgelm-ui
+    ports:
+      - "8501:8501"
+    environment:
+      - API_URL=http://forgelm-api:8000/troubleshoot
+    restart: unless-stopped
+    networks:
+      - forgelm-net
+
+networks:
+  forgelm-net:
+    driver: bridge
