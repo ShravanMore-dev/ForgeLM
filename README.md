@@ -284,7 +284,7 @@ ForgeLM/
 ├── Dockerfile.ui         # Frontend container configuration
 └── README.md             # Project documentation
 
-
+```
 The internal source structure may evolve as the project develops.
 
 ---
