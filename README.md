@@ -267,29 +267,23 @@ The Streamlit interface provides the main ForgeLM user experience.
 
 ## 📂 Project Structure
 
-A typical deployment can follow this structure:
-
 ```text
 ForgeLM/
-├── models/
-│   └── fine-tuned-model/
-│
-├── data/
-│   ├── runbooks/
-│   ├── sops/
-│   └── troubleshooting/
-│
-├── backend/
-│   └── FastAPI application
-│
-├── frontend/
-│   └── Streamlit application
-│
-├── Dockerfile
-├── docker-compose.yml
-├── .gitignore
-└── README.md
-```
+├── api/
+│   ├── agent.py          # FastAPI backend and LangChain ReAct engine
+│   └── tools.py          # Custom SRE tool execution scripts
+├── ui/
+│   └── app.py            # Streamlit frontend application
+├── data/                 # FAISS vector database and text runbooks
+├── models/               # Local LLM weights and LoRA configurations
+├── scripts/              # Utility and deployment scripts
+├── .env                  # Environment variables and secrets
+├── .gitignore            # Git exclusion definitions
+├── docker-compose.yml    # Local multi-container orchestration
+├── Dockerfile.api        # Backend container configuration
+├── Dockerfile.ui         # Frontend container configuration
+└── README.md             # Project documentation
+
 
 The internal source structure may evolve as the project develops.
 
